@@ -1,3 +1,3 @@
-Dependencies used: 
-http 
+Dependencies used: \n 
+http \n
 flutter_toastr
