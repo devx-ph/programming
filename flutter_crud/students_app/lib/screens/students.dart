@@ -116,7 +116,7 @@ class _StudentsPageState extends State<StudentsPage> {
                       ),
                     );
                   }));
-            }
+            } // end if statement
             return const Center(
               child: CircularProgressIndicator(),
             );
