@@ -3,6 +3,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class PageController extends CI_Controller
 {
+	public function accessdenied()
+	{
+		$this->load->view('template/header.php');
+		$this->load->view('errors/403');
+		$this->load->view('template/footer.php');
+	}
+
 	public function index()
 	{
 		echo "I am index Method - Page controller  HOME in url";
