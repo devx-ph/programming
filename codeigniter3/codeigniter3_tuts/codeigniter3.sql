@@ -1,8 +1,8 @@
--- MariaDB dump 10.19  Distrib 10.11.4-MariaDB, for Linux (x86_64)
+-- MariaDB dump 10.19-11.0.2-MariaDB, for Linux (x86_64)
 --
 -- Host: localhost    Database: codeigniter3
 -- ------------------------------------------------------
--- Server version	10.11.4-MariaDB
+-- Server version	11.0.2-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -37,7 +37,7 @@ CREATE TABLE `employee` (
   `phone` varchar(15) NOT NULL,
   `email` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,19 +47,52 @@ CREATE TABLE `employee` (
 LOCK TABLES `employee` WRITE;
 /*!40000 ALTER TABLE `employee` DISABLE KEYS */;
 INSERT INTO `employee` VALUES
-(1,'Kristian','Bulos','0912869824','kristianryanbulos@gmail.com'),
+(1,'Kristian Ryan','Bulos','0912869824','kristianryanbulos@gmail.com'),
 (2,'John','Doe','09123456789','jdoe@mail.com'),
 (3,'Jane','Doe','09123456789','janedoe@mail.com'),
-(14,'emp','0003','09991231234','emp0003@mail.com'),
-(15,'emp','0004','09991231234','emp0004@mail.com'),
-(16,'emp','0005','09991231234','emp0005@mail.com'),
-(17,'emp','0006','09991231234','emp0006@mail.com'),
-(18,'emp','0007','09991231234','emp0007@mail.com'),
-(19,'emp','0008','09991231234','emp0008@mail.com'),
-(21,'test','2','09991231234','test2@test.com'),
 (23,'test','3','09991231234','test3@mail.com'),
-(26,'test','4','09991231234','test4@mail.com');
+(26,'test','4','09991231234','test4@mail.com'),
+(28,'test123','1234','09991231234','test132@m.c'),
+(29,'emp','0001','09991231234','emp0001@m.c'),
+(30,'emp','0002','09991231234','emp0002@m.c'),
+(31,'emp','0003','09991231234','emp0003@m.c'),
+(32,'emp','0004','09991231234','emp0004@m.c'),
+(33,'emp','0005','09991231234','empp0005@m.c'),
+(34,'emp','0006','09991231234','emp0006@m.c'),
+(35,'emp','0007','09991231234','emp0007@m.c');
 /*!40000 ALTER TABLE `employee` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `products`
+--
+
+DROP TABLE IF EXISTS `products`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `price` varchar(50) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `products`
+--
+
+LOCK TABLES `products` WRITE;
+/*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO `products` VALUES
+(1,'Thinkpad X220','Lenovo ThinkPad X220 \r\n- Core i5 2540M /2.6 GHz \r\n- Win 7 Pro 64-bit \r\n- 4 GB RAM - 320 GB HDD\r\n- DVD-Writer \r\n- 12.5\" IPS Premium 1366 x 768 (HD)\r\n- HD Graphics 3000 \r\n- 3G upgradable \r\n- vPro \r\n- black \r\n- with UltraBase Series 3','10000','1688957621-x220.jpg','2023-07-09 10:07:19'),
+(17,'test1 updated','test1 updated','10','1688957108-codeigniter3_timestamp.png','2023-07-10 02:44:43'),
+(18,'test2','test2','10','1688957553-codeigniter3_timestamp.png','2023-07-10 02:46:44'),
+(19,'test3','test3','10','1688957536-test.png','2023-07-10 02:52:16');
+/*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -110,4 +143,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-07 14:47:26
+-- Dump completed on 2023-07-10 15:09:50
