@@ -28,4 +28,10 @@ class EmployeeModel extends CI_Model
 	{
 		$this->db->delete('employee', ['id' => $id]);
 	}
+
+	public function deleteSelectedEmp($checked_id)
+	{
+		$this->db->where_in('id', $checked_id);
+		return $this->db->delete('employee');
+	}
 }

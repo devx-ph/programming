@@ -4,7 +4,7 @@
 			<div class="card">
 				<div class="card-header">
 					<h5>
-						How to insert Employee data into database
+						Add Employee
 						<a href="<?php echo base_url('employee'); ?>" class="btn btn-danger float-right">BACK</a>
 					</h5>
 				</div>

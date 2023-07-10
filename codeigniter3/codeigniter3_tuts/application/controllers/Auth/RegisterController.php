@@ -20,9 +20,9 @@ class RegisterController extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('template/header.php');
-		$this->load->view('auth/register.php');
-		$this->load->view('template/footer.php');
+		$this->load->view('template/header');
+		$this->load->view('auth/register');
+		$this->load->view('template/footer');
 	}
 
 	public function register()
